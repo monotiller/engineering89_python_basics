@@ -87,9 +87,9 @@ Some data types:
 |    -       | subtract two operands (variables)    | X - y - 2  |
 |    *       | multiply two operands (variables)    | X - y - 2  |
 |    /       | divide two operands (variables)      | X - y - 2  |
-    |    %   | Modulus - remainder of the division of left operand by the right    | X - y - 2  |
+|    %   | Modulus - remainder of the division of left operand by the right    | X - y - 2  |
 |    +       | add two operands (variables) together| X + y + 2  |
-|    **       | does powers of | X ** y  |
+|    **       | does powers of                      | X ** y  |
 
 ### Comparison Operators
 | Operand    | Description                          | Example         |
@@ -123,4 +123,118 @@ print(number_1 == number_2) # is number_1 equal number_2 = False they are not eq
 print(number_1 != number_2) # is number_1 not equal to number_2 = True they are not equal
 print(number_1 >= number_2) # is number_1 greater than number_2 = True
 print(number_1 <= number_2) # is number_1 less than number_2 = False
+```
+
+## String casting and concatenation
+- Using and managing strings
+- String casting
+- String concatenation
+- Casting methods
+- Single *AND* double quotes
+
+```python
+single_quotes = 'These are single quotes and are working perfectly fine'
+double_quotes = "These are double quotes and are working perfectly fine"
+
+print(single_quotes) # = These are single quotes and are working perfectly fine
+print(double_quotes) # = These are double quotes and are working perfectly fine
+```
+Don't forget, you can use the \ as an escape character so you may use either the single quote in a single quote or a double quote in a double!
+### Concatenation
+```python
+print(single_quotes+ ' ' + double_quotes) # = These are single quotes and are working perfectly fine These are double quotes and are working perfectly fine
+```
+Concatenation allows you to literally add two strings together
+```python
+First_Name = "Joe"
+Last_Name = "Bloggs"
+print(First_Name + ' ' + Last_Name) # = Joe Bloggs
+```
+Now let's create a variable called `Age` and add it to the same line as `Joe Bloggs`
+```python
+First_Name = "Joe"
+Last_Name = "Bloggs"
+Age = 56
+print(First_Name + ' ' + Last_Name + '. And your age is:' + Age)
+```
+Now this won't work. Why? Well because you can't concatonate anything that ***ISN'T*** a string:
+```commandline
+Traceback (most recent call last):
+  File "/Users/monotiller/Developer/Sparta Global/python_engineering89_basics/string_casting_concatenation.py", line 11, in <module>
+    print(First_Name + ' ' + Last_Name + '. And your age is:' + Age)
+TypeError: can only concatenate str (not "int") to str
+```
+So, we can fix this by wrapping `Age` in `str()`:
+```python
+First_Name = "Joe"
+Last_Name = "Bloggs"
+Age = 56
+print(First_Name + ' ' + Last_Name + '. And your age is: ' + str(Age))
+```
+Which gives us:
+```commandline
+"Joe Bloggs. And your age is: 56"
+```
+
+### String slicing
+```python
+greetings = "Hello World!"
+```
+In python (as many languages) counting starts at 0. So value `0` is `H`, `3` is `l`
+
+To confirm the length of a string:
+```python
+len(greetings) # = 12
+```
+Now, let's slice:
+```python
+print(greetings[0:5]) # = Hello
+```
+So `0:5` means that it will print values 0 to 4, the last number is not included.
+
+How do you reverse a string? Well, to get the last value of a string you just need to use `-1`
+```python
+print(greetings[-1]) # = !
+```
+This will slice the string right to left starting at `-1`
+
+Now here's how you print only `World`
+```python
+print(greetings[6:]) # = World!
+print(greetings[-6:]) # = World
+```
+
+### String built in methods
+So, how do we remove data that isn't useful to us such as white spaces?
+```python
+white_spaces = "Lot's of white spaces                    "
+```
+We don't need the white spaces, but the enterpreter will see them
+```python
+print(len(white_spaces)) # = 41
+```
+We don't want the 41 characters. So we can use the `strip()` method. This will remove white spaces
+```python
+print(white_spaces.strip()) # = Lot's of white spaces
+```
+Let's check the length:
+```python
+print(len(white_spaces.strip())) # = 21
+```
+
+### Some more built in methods that we can use with string
+How do we see how many times a word appears in a string? We use `count()`
+```python
+example_text = "here's some text with lot's of text"
+print(example_text.count("text")) # = 2
+```
+This shows that there are 2 instances of `"text"` in `example_text`. But it is case sensitive, this is where `upper()` and `lower()` come  in to play. This makes it so that strings are forced into upper or lower case respectively
+```python
+print(example_text.upper()) # = HERE'S SOME TEXT WITH LOT'S OF TEXT
+print(example_text.lower()) # = here's some text with lot's of text
+print(example_text.capitalize()) # = Here's some text with lot's of text
+```
+We can also use `replace()` to, well, replace
+```python
+print(example_text.replace("with", ",")) # = here's some text , lot's of text
 ```
