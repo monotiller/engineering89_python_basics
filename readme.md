@@ -87,9 +87,9 @@ Some data types:
 |    -       | subtract two operands (variables)    | X - y - 2  |
 |    *       | multiply two operands (variables)    | X - y - 2  |
 |    /       | divide two operands (variables)      | X - y - 2  |
-    |    %   | Modulus - remainder of the division of left operand by the right    | X - y - 2  |
+|    %   | Modulus - remainder of the division of left operand by the right    | X - y - 2  |
 |    +       | add two operands (variables) together| X + y + 2  |
-|    **       | does powers of | X ** y  |
+|    **       | does powers of                      | X ** y  |
 
 ### Comparison Operators
 | Operand    | Description                          | Example         |
