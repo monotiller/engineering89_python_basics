@@ -1,3 +1,4 @@
+
 # Python
 ## Why python?
 ### Python installation and Pycharm setup
@@ -48,7 +49,7 @@ User_Name = input("Please enter your name: ")
 print("Hello")
 print(User_Name)
 ```
-## Activity
+### Activity
 - variables: `first_name`, `last_name`, `age`, `DOB`
 - Prompt user to input above values
 - Print/display the type of each value received from the user
@@ -65,4 +66,61 @@ print(age, type(age))
 print(date_of_birth, type(date_of_birth))
 
 print("To confirm, your name is: {} {}, you say you are {} years old and you were born on {}".format(first_name, last_name, age, date_of_birth))
+```
+
+## Data types and operators
+What are data types and operators?
+
+Data types are the core of all programming languages. After all, if there is no data there is not a program.
+
+Through the next few lessons we will be learning about all many of the data types available and more importantly some of the inbuilt methods around these data types that we can guarantee will be valuable to you as you progress.
+
+Some data types:
+- Boolean (True or false)
+- Numbers (Integers, double, float, longs)
+- Strings (Text)
+- Operators (See tables below)
+### Arithmetic Operators
+| Operand    | Description                          | Example    |
+|:---------: |:----------------------------:        |:--------:  |
+|    +       | add two operands (variables) together| X + y + 2  |
+|    -       | subtract two operands (variables)    | X - y - 2  |
+|    *       | multiply two operands (variables)    | X - y - 2  |
+|    /       | divide two operands (variables)      | X - y - 2  |
+    |    %   | Modulus - remainder of the division of left operand by the right    | X - y - 2  |
+|    +       | add two operands (variables) together| X + y + 2  |
+|    **       | does powers of | X ** y  |
+
+### Comparison Operators
+| Operand    | Description                          | Example         |
+|:---------: |:----------------------------:        |:--------:       |
+|    >       | True if left operand is greater than the right| x > y  |
+|    <       | True if left operand is less than the right| x < y     |
+|    ==      | True if both operands are equal            | x == y    |
+|    !=      | True if both operands are equal            | x != y    |
+|    >=      | True if left operand is greater than or equal to the right| x >= y     |
+|    <=      | True if left operand is less than or equal to the right| x <= y     |
+
+### Examples
+```python
+number_1 = 4
+number_2 = 2
+
+print(number_1 + number_2) # Adding two values = 6
+print(number_1 - number_2) # Subtracting two values = 2
+print(number_1 * number_2) # Multiplying two values = 8
+print(number_1 / number_2) # Dividing two values = 2.0 (because division immediately turns this in to a float)
+print(number_1 % number_2) # Remainder of two values = 0
+print(number_1 ** number_2) # Power of a number so 4^2 = 16
+```
+
+Let's look at boolean values
+```python
+number_1 = 4
+number_2 = 2
+
+print(number_1 == number_2) # is number_1 equal number_2 = False they are not equal
+print(number_1 != number_2) # is number_1 not equal to number_2 = True they are not equal
+print(number_1 >= number_2) # is number_1 greater than number_2 = True
+print(number_1 <= number_2) # is number_1 less than number_2 = False
 ```
