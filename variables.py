@@ -8,9 +8,9 @@ last_name = input("...and now your last name: ")
 age = input("...now your age: ")
 date_of_birth = input("...finally, your date of birth: ")
 
-print(first_name)
-print(last_name)
-print(age)
-print(date_of_birth)
+print(first_name, type(first_name))
+print(last_name, type(last_name))
+print(age, type(age))
+print(date_of_birth, type(date_of_birth))
 
 print("To confirm, your name is: {} {}, you say you are {} years old and you were born on {}".format(first_name, last_name, age, date_of_birth))
